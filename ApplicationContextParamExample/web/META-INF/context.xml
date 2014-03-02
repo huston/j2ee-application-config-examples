@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/example2">
+    <Parameter name="param2" value="New Value2" override="false"/>
+    <Parameter name="param3" value="New Value3" override="true"/>
+    <Parameter name="param4" value="Value4" override="false"/>
+</Context>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+           version="2.5">
+
+    <display-name>Example App</display-name>
+    <description>An example application</description>
+
+    <context-param>
+        <description>This is a context parameter example</description>
+        <param-name>param1</param-name>
+        <param-value>Value1</param-value>
+    </context-param>
+
+    <context-param>
+        <description>This is an example of a context parameter override</description>
+        <param-name>param2</param-name>
+        <param-value>Original Value2</param-value>
+    </context-param>
+
+    <context-param>
+        <description>This is an example of a context parameter not overridden</description>
+        <param-name>param3</param-name>
+        <param-value>Original Value3</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>ConfigExampleServlet</servlet-name>
+        <servlet-class>com.example.ConfigExampleServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfigExampleServlet</servlet-name>
+        <url-pattern>/ConfigExampleServlet</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>ConfigExampleServlet</welcome-file>
+    </welcome-file-list>
+</web-app>
